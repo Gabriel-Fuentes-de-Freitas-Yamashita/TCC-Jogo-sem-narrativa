@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Plataforma2D-TCC-Robô-História"
-run/main_scene="uid://bnlst5s3g2sgl"
+run/main_scene="uid://08d7achlf0a1"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,7 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 Player=""
+LethalArea=""
 
 [input]
 
@@ -53,6 +54,7 @@ jump={
 2d_physics/layer_1="terrain"
 2d_physics/layer_2="player"
 2d_physics/layer_3="level_end"
+2d_physics/layer_4="lethal_area"
 
 [rendering]
 
