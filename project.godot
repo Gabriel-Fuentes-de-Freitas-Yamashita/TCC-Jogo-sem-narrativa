@@ -11,14 +11,18 @@ config_version=5
 [application]
 
 config/name="Plataforma2D-TCC-Robô-História"
-run/main_scene="uid://08d7achlf0a1"
+run/main_scene="uid://bnlst5s3g2sgl"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*res://scripts/game_state.gd"
+
 [display]
 
-window/size/viewport_width=480
-window/size/viewport_height=288
+window/size/viewport_width=600
+window/size/viewport_height=352
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
@@ -48,6 +52,11 @@ jump={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
 ]
 }
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -55,6 +64,7 @@ jump={
 2d_physics/layer_2="player"
 2d_physics/layer_3="level_end"
 2d_physics/layer_4="lethal_area"
+2d_physics/layer_5="interactive_objects"
 
 [rendering]
 

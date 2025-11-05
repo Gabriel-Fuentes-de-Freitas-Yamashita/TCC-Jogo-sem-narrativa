@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bnlst5s3g2sgl"]
+[gd_scene load_steps=7 format=4 uid="uid://bnlst5s3g2sgl"]
 
 [ext_resource type="PackedScene" uid="uid://mirrhf6qgo8s" path="res://entities/player.tscn" id="1_c13y7"]
 [ext_resource type="PackedScene" uid="uid://p3yv32j15wku" path="res://entities/camera.tscn" id="2_4kmhl"]
 [ext_resource type="TileSet" uid="uid://bhkgwg7fxrlyg" path="res://tiles/terrain.tres" id="2_8ho6b"]
 [ext_resource type="PackedScene" uid="uid://dq7ecplmf70hp" path="res://entities/level_end.tscn" id="3_ph3nu"]
+[ext_resource type="PackedScene" uid="uid://bex4khrsw84mo" path="res://interactive_objects/door.tscn" id="5_cq4me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kmhl"]
 size = Vector2(20, 275)
@@ -11,7 +12,7 @@ size = Vector2(20, 275)
 [node name="Tutorial" type="Node2D"]
 
 [node name="PLayer" parent="." instance=ExtResource("1_c13y7")]
-position = Vector2(15, 254)
+position = Vector2(594, 256)
 
 [node name="Camera" parent="." instance=ExtResource("2_4kmhl")]
 
@@ -26,5 +27,10 @@ next_level = "fase_1"
 [node name="CollisionShape2D" parent="LevelEnd" index="0"]
 position = Vector2(0, -127.5)
 shape = SubResource("RectangleShape2D_4kmhl")
+
+[node name="door" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(632, 256)
+door_id = "fase_1_tutorial"
+next_level = "fase_1"
 
 [editable path="LevelEnd"]
