@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Plataforma2D-TCC-Robô-História"
+config/name="Plataforma2D-TCC-Sem-Narrativa"
 run/main_scene="uid://bnlst5s3g2sgl"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
@@ -28,8 +28,8 @@ window/stretch/mode="canvas_items"
 
 [global_group]
 
-Player=""
 LethalArea=""
+player=""
 
 [input]
 
