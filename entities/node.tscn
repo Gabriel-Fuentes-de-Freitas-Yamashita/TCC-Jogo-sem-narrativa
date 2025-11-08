@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkphae1a2j2br"]
+
+[ext_resource type="Texture2D" uid="uid://b8plm1n4ftpbu" path="res://sprites/Traps/Spikes/Idle.png" id="1_fu4me"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5bsok"]
+radius = 5.0
+height = 20.0
+
+[node name="Node" type="Area2D" groups=["LethalArea"]]
+position = Vector2(-1, 3)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["LethalArea"]]
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_5bsok")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -3)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_fu4me")

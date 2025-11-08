@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://bnlst5s3g2sgl"]
+[gd_scene load_steps=7 format=4 uid="uid://bnlst5s3g2sgl"]
 
 [ext_resource type="PackedScene" uid="uid://mirrhf6qgo8s" path="res://entities/player.tscn" id="1_c13y7"]
 [ext_resource type="TileSet" uid="uid://bhkgwg7fxrlyg" path="res://tiles/terrain.tres" id="2_8ho6b"]
 [ext_resource type="PackedScene" uid="uid://dq7ecplmf70hp" path="res://entities/level_end.tscn" id="3_ph3nu"]
+[ext_resource type="PackedScene" uid="uid://bacno1axq3g8h" path="res://entities/camera.tscn" id="5_6yjpi"]
 [ext_resource type="PackedScene" uid="uid://bex4khrsw84mo" path="res://interactive_objects/door.tscn" id="5_cq4me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kmhl"]
@@ -28,5 +29,7 @@ shape = SubResource("RectangleShape2D_4kmhl")
 [node name="door" parent="." instance=ExtResource("5_cq4me")]
 position = Vector2(632, 256)
 next_level = "fase_1"
+
+[node name="Camera2D" parent="." instance=ExtResource("5_6yjpi")]
 
 [editable path="LevelEnd"]

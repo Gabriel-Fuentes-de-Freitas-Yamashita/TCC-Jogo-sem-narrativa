@@ -13,5 +13,5 @@ func get_target():
 	if nodes.size() == 0:
 		push_error("Player not found")
 		return
-		
+
 	target = nodes[0]
